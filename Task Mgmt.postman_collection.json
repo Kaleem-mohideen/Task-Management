@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "b5d0ce4c-3802-488a-97e2-b762850fda49",
+		"name": "Task Mgmt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38620431"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "mirkaleem",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/auth/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "mirkaleem",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/auth/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "User - Get apps",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Admin - Add Apps and points (Restricted to Admin)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin1",
+						"password": "adminpassword"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "LinkedIn",
+							"type": "text"
+						},
+						{
+							"key": "points",
+							"value": "105",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/admin/add_app/"
+			},
+			"response": []
+		},
+		{
+			"name": "User - Upload Screenshot",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "mirkaleem"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "screenshot",
+							"type": "file",
+							"src": "postman-cloud:///1efc359e-fa3a-4680-b010-f788b86f5095"
+						},
+						{
+							"key": "app_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/user/upload_screenshot/"
+			},
+			"response": []
+		},
+		{
+			"name": "User -  Profile view",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password",
+						"username": "mirkaleem"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "screenshot",
+							"type": "file",
+							"src": "postman-cloud:///1efc359e-fa3a-4680-b010-f788b86f5095"
+						},
+						{
+							"key": "app_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/user/upload_screenshot/"
+			},
+			"response": []
+		}
+	]
+}
